@@ -78,7 +78,7 @@ export default function LandingPagesService() {
             </div>
           </div>
 
-          {/* The GrowthGPT Way */}
+          {/* The Celeris Way */}
           <div className="bg-slate-900 p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-cyan-500/30 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
             <div className="relative z-10">

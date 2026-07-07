@@ -85,7 +85,7 @@ export default function LeadRoutingService() {
                     <Bot className="w-5 h-5" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-900 text-sm">GrowthGPT Assistant</h5>
+                    <h5 className="font-bold text-slate-900 text-sm">Celeris Assistant</h5>
                     <p className="text-xs text-emerald-500 font-medium">Online</p>
                   </div>
                 </div>

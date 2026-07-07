@@ -7,7 +7,6 @@ import { Zap, ArrowRight, Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to close the menu when a link is clicked
   const closeMenu = () => setIsOpen(false);
 
   return (
@@ -21,7 +20,7 @@ export default function Navbar() {
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-extrabold text-white tracking-tight">
-              Growth<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">GPT</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Celeris</span>.
             </span>
           </Link>
 
@@ -32,6 +31,9 @@ export default function Navbar() {
             </Link>
             <Link href="/services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Infrastructure
+            </Link>
+            <Link href="/about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+              About us
             </Link>
             <Link href="/contact" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Contact
@@ -81,6 +83,13 @@ export default function Navbar() {
             className="block px-4 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
           >
             Infrastructure
+          </Link>
+          <Link 
+            href="/about" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+          >
+            About
           </Link>
           <Link 
             href="/contact" 

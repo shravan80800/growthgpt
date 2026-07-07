@@ -77,14 +77,14 @@ export default function TrackingInfrastructureService() {
             </div>
           </div>
 
-          {/* The GrowthGPT Way */}
+          {/* The Celeris Way */}
           <div className="bg-slate-900 p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-emerald-500/30 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
             <div className="relative z-10">
               <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mb-8 border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
                 <Server className="w-8 h-8" />
               </div>
-              <h3 className="text-3xl font-extrabold text-white mb-4 tracking-tight">The GrowthGPT Way</h3>
+              <h3 className="text-3xl font-extrabold text-white mb-4 tracking-tight">The Celeris Way</h3>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                 We capture the conversion on our secure backend server, then instantly route the data back to Meta/Google via their Conversions API (CAPI). The user's browser cannot block a server-to-server connection.
               </p>
