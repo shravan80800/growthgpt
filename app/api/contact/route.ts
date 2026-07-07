@@ -3,7 +3,9 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const WEBHOOK_URL = "https://hook.eu1.make.com/4w8u58kw5v9gdoprjs4pplwxm832wkbm";
+    
+    // Securely pull the URL from your environment variables
+    const WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL!;
 
     const response = await fetch(WEBHOOK_URL, {
       method: 'POST',
