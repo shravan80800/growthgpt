@@ -4,14 +4,15 @@ import {
   Code, MessageSquare, Zap, 
   Layers, ShieldCheck, Cpu, 
   Smartphone, BarChart, Rocket, 
-  Globe, Megaphone, MousePointerClick, Workflow
+  Megaphone, MousePointerClick, Workflow,
+  Palette, BrainCircuit, Briefcase, Mail, TrendingUp
 } from 'lucide-react';
 
 export default function ServicesHubPage() {
   return (
     <div className="bg-slate-50 min-h-screen pb-24 font-sans selection:bg-blue-500/30">
       
-      {/* 1. HERO SECTION (Aurora Dark Mode & Elevator Pitch) */}
+      {/* 1. HERO SECTION (Aurora Dark Mode & Unified Pitch) */}
       <section className="relative bg-[#0B0F19] pt-40 pb-32 overflow-hidden flex flex-col justify-center border-b border-white/10">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-[60%] h-[60%] rounded-full bg-blue-600/10 blur-[150px] mix-blend-screen animate-pulse"></div>
@@ -21,46 +22,149 @@ export default function ServicesHubPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-300 text-sm font-bold mb-8 backdrop-blur-md uppercase tracking-widest">
-            <Cpu className="w-4 h-4" />
-            <span>The Technical Growth Agency</span>
+            <Layers className="w-4 h-4" />
+            <span>Unified Growth Infrastructure</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
-            We engineer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">scalable revenue.</span>
+            Every growth lever you need,<br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">unified under one roof.</span>
           </h1>
           
-          {/* The Core Elevator Pitch */}
           <div className="max-w-5xl mx-auto bg-slate-800/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(37,99,235,0.15)] relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <p className="text-2xl md:text-3xl text-slate-200 leading-relaxed font-light relative z-10 italic">
-              "We build high-velocity React landing pages, deploy server-side tracking, and run algorithmic ad campaigns that route hot leads directly to your WhatsApp via API."
+              "No siloed vendors, no misaligned incentives—just coordinated, compounding results. We build high-velocity React landing pages, deploy server-side tracking, and run algorithmic ad campaigns that route hot leads directly to your WhatsApp via API."
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2. THE "FULL STACK" GUARANTEE BANNER */}
-      <section className="relative -mt-10 z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-2xl p-1 shadow-[0_0_40px_rgba(37,99,235,0.3)]">
-          <div className="bg-slate-900 rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-2 flex items-center justify-center md:justify-start">
-                <Globe className="w-6 h-6 mr-3 text-blue-400" />
-                Comprehensive Marketing Support
-              </h3>
-              <p className="text-slate-400 text-lg max-w-2xl">
-                While we specialize in elite technical infrastructure, <span className="text-white font-semibold">we support every marketing need you have.</span> From branding and copywriting to SEO and email automation, we are your end-to-end growth partner.
-              </p>
+      {/* 2. CORE SERVICES BENTO GRID (The 6 Levers) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="text-center mb-20">
+          <h2 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Core Services</h2>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Full-Funnel Domination.</h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          {/* Performance Marketing */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center border border-blue-100 group-hover:scale-110 transition-transform">
+                <Megaphone className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <TrendingUp className="w-4 h-4 mr-1.5" /> +340% Avg. ROAS
+              </div>
             </div>
-            <Link href="/contact" className="flex-shrink-0 px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
-              Discuss Your Needs
-            </Link>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">Performance Marketing</h4>
+            <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
+              Hyper-targeted Meta, Google, and TikTok campaigns engineered to convert. We test relentlessly, isolate winning creatives, and scale aggressively to dominate your market share.
+            </p>
+            <ul className="space-y-3 text-sm text-slate-700 font-medium">
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" /> Full-funnel Meta Ads management</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" /> Google Search, Display & PMax</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" /> Dynamic creative optimization</li>
+            </ul>
           </div>
+
+          {/* CRO */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center border border-cyan-100 group-hover:scale-110 transition-transform">
+                <MousePointerClick className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <TrendingUp className="w-4 h-4 mr-1.5" /> -40% Avg. CAC
+              </div>
+            </div>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">High-Converting Webpages</h4>
+            <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
+              Traffic means nothing if it doesn't convert. We design, build, and rigorously optimize high-velocity landing pages tailored to specific ad funnels and buyer intent stages.
+            </p>
+            <ul className="space-y-3 text-sm text-slate-700 font-medium">
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" /> Funnel-matched landing page design</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" /> Multivariate & A/B testing</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-cyan-500 mr-2 flex-shrink-0" /> Speed & Core Web Vitals tuned</li>
+            </ul>
+          </div>
+
+          {/* Retention */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center border border-purple-100 group-hover:scale-110 transition-transform">
+                <Mail className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <TrendingUp className="w-4 h-4 mr-1.5" /> +60% LTV Boost
+              </div>
+            </div>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">Email & Lifecycle</h4>
+            <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
+              Post-acquisition flows, win-back sequences, and segmented newsletters that maximize Lifetime Value and compound your paid acquisition gains.
+            </p>
+            <ul className="space-y-3 text-sm text-slate-700 font-medium">
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" /> Automated onboarding sequences</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" /> Cart abandonment recovery</li>
+              <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" /> VIP customer segmentation</li>
+            </ul>
+          </div>
+
+          {/* Creative */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center border border-pink-100 group-hover:scale-110 transition-transform">
+                <Palette className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <TrendingUp className="w-4 h-4 mr-1.5" /> 3x CTR Lift
+              </div>
+            </div>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">Creative & Content</h4>
+            <p className="text-slate-600 flex-grow leading-relaxed">
+              Data-backed ad creatives, UGC curation, and brand storytelling that genuinely stops the scroll and drives clicks from qualified buyers. We turn attention into intent.
+            </p>
+          </div>
+
+          {/* B2B */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center border border-indigo-100 group-hover:scale-110 transition-transform">
+                <Briefcase className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <TrendingUp className="w-4 h-4 mr-1.5" /> 2.5x Lead Volume
+              </div>
+            </div>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">B2B Lead Generation</h4>
+            <p className="text-slate-600 flex-grow leading-relaxed">
+              Intent-driven LinkedIn, Google, and content strategies that fill your pipeline with decision-makers ready to buy, bypassing the gatekeepers entirely.
+            </p>
+          </div>
+
+          {/* Intelligence */}
+          <div className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+            <div className="flex justify-between items-start mb-6">
+              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center border border-emerald-100 group-hover:scale-110 transition-transform">
+                <BrainCircuit className="w-7 h-7" />
+              </div>
+              <div className="px-3 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-extrabold rounded-full border border-emerald-200 flex items-center shadow-sm">
+                <CheckCircle2 className="w-4 h-4 mr-1.5" /> 100% Attribution
+              </div>
+            </div>
+            <h4 className="text-2xl font-bold text-slate-900 mb-3">Advanced Analytics</h4>
+            <p className="text-slate-600 flex-grow leading-relaxed">
+              Multi-touch attribution models so you know exactly which dollar brought in which customer. Total clarity on every channel's ROI, eliminating wasted ad spend.
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* 3. THE ECOSYSTEM MAP (Visual Flow restored) */}
-      <section className="bg-slate-900 py-32 mt-20 border-y border-white/5 relative overflow-hidden">
+      {/* 3. THE ECOSYSTEM MAP (Visual Flow) */}
+      <section className="bg-slate-900 py-32 border-y border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900 to-slate-900 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -77,7 +181,7 @@ export default function ServicesHubPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               <div className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-transform duration-300">
                 <div className="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-blue-500/30">
-                  <Megaphone className="w-7 h-7" />
+                  <Target className="w-7 h-7" />
                 </div>
                 <h4 className="text-xl text-white font-bold mb-3">1. Algorithmic Ads</h4>
                 <p className="text-slate-400 leading-relaxed">Meta/Google ML engines find the exact buyer using server-side API data pipelines.</p>
@@ -111,7 +215,7 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      {/* 4. CORE SERVICES DEEP DIVE (The Technical Hybrid Stack) */}
+      {/* 4. CORE SERVICES DEEP DIVE (The Engine Room) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 space-y-24">
         
         <div className="text-center mb-24">
@@ -119,11 +223,11 @@ export default function ServicesHubPage() {
           <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Our Core Technical Pillars</h3>
         </div>
 
-        {/* SERVICE 1: Algorithmic Traffic Generation */}
+        {/* Technical Pillar 1 */}
         <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col lg:flex-row items-center gap-16 group hover:border-blue-200 transition-all duration-500 hover:shadow-2xl">
           <div className="lg:w-1/2">
             <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-inner border border-blue-100 group-hover:scale-110 transition-transform duration-500">
-              <Target className="w-8 h-8" />
+              <Cpu className="w-8 h-8" />
             </div>
             <h2 className="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Algorithmic Traffic Generation</h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -169,7 +273,7 @@ export default function ServicesHubPage() {
           </div>
         </div>
 
-        {/* SERVICE 2: High-Velocity React Landing Pages (Reversed) */}
+        {/* Technical Pillar 2 */}
         <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col lg:flex-row-reverse items-center gap-16 group hover:border-cyan-200 transition-all duration-500 hover:shadow-2xl">
           <div className="lg:w-1/2">
             <div className="w-16 h-16 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center mb-8 shadow-inner border border-cyan-100 group-hover:scale-110 transition-transform duration-500">
@@ -220,7 +324,7 @@ export default function ServicesHubPage() {
           </div>
         </div>
 
-        {/* SERVICE 3: Server-Side Tracking & Routing */}
+        {/* Technical Pillar 3 */}
         <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col lg:flex-row items-center gap-16 group hover:border-purple-200 transition-all duration-500 hover:shadow-2xl">
           <div className="lg:w-1/2">
             <div className="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-inner border border-purple-100 group-hover:scale-110 transition-transform duration-500">
@@ -284,7 +388,85 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      {/* 5. TECH STACK / INTEGRATIONS (Builds Trust) */}
+      {/* 5. THE GROWTH BLUEPRINT (Timeline) */}
+      <section className="bg-[#0B0F19] py-32 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-24">
+            <h2 className="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">The Growth Blueprint</h2>
+            <h3 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">How We Scale Brands</h3>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              A proven, repeatable system refined across 60+ brands. No guesswork—just a disciplined, data-led process that compounds over time.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-slate-800 z-0">
+              <div className="absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 animate-[pulse_3s_ease-in-out_infinite]"></div>
+            </div>
+
+            {/* Phase 01 */}
+            <div className="relative z-10 flex flex-col group">
+              <div className="w-16 h-16 bg-slate-800 text-white font-black text-2xl rounded-2xl flex items-center justify-center mb-8 border border-slate-700 shadow-xl group-hover:bg-blue-600 transition-colors">
+                01
+              </div>
+              <h4 className="text-blue-400 font-bold tracking-widest text-sm mb-2 uppercase">Weeks 1–2</h4>
+              <h5 className="text-2xl font-bold text-white mb-4">Audit & Strategize</h5>
+              <p className="text-slate-400 mb-6 leading-relaxed flex-grow">
+                We conduct a forensic deep-dive into your historical ad data, competitor landscape, funnel friction points, and audience intelligence. This creates the strategic blueprint for everything that follows.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-300 mt-auto">
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div> Full Meta & Google account audit</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div> Competitor positioning teardown</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div> Funnel mapping & friction isolation</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div> KPI framework definition</li>
+              </ul>
+            </div>
+
+            {/* Phase 02 */}
+            <div className="relative z-10 flex flex-col group">
+              <div className="w-16 h-16 bg-slate-800 text-white font-black text-2xl rounded-2xl flex items-center justify-center mb-8 border border-slate-700 shadow-xl group-hover:bg-purple-600 transition-colors">
+                02
+              </div>
+              <h4 className="text-purple-400 font-bold tracking-widest text-sm mb-2 uppercase">Weeks 3–6</h4>
+              <h5 className="text-2xl font-bold text-white mb-4">Launch & Optimize</h5>
+              <p className="text-slate-400 mb-6 leading-relaxed flex-grow">
+                Rapid deployment of dynamic creative variants and bespoke landing pages across channels. We run structured multivariate tests, iterate weekly, and isolate the highest-performing combinations.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-300 mt-auto">
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3"></div> Dynamic creative testing matrix</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3"></div> Landing page variants deployed</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3"></div> Bid strategy & budget pacing</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3"></div> Audience exclusions & refinements</li>
+              </ul>
+            </div>
+
+            {/* Phase 03 */}
+            <div className="relative z-10 flex flex-col group">
+              <div className="w-16 h-16 bg-slate-800 text-white font-black text-2xl rounded-2xl flex items-center justify-center mb-8 border border-slate-700 shadow-xl group-hover:bg-emerald-500 transition-colors">
+                03
+              </div>
+              <h4 className="text-emerald-400 font-bold tracking-widest text-sm mb-2 uppercase">Week 7 Onwards</h4>
+              <h5 className="text-2xl font-bold text-white mb-4">Scale & Dominate</h5>
+              <p className="text-slate-400 mb-6 leading-relaxed flex-grow">
+                Winners are identified. Budget is aggressively shifted to highest-ROAS channels. Audiences are expanded via lookalikes and interest layering. Your revenue compounds while CAC falls.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-300 mt-auto">
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3"></div> ROAS-based budget reallocation</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3"></div> Lookalike audience expansion</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3"></div> Cross-channel retargeting loops</li>
+                <li className="flex items-center"><div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3"></div> LTV-based bidding strategies</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 6. TECH STACK / INTEGRATIONS */}
       <section className="py-24 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Plays nice with your current stack.</h2>
@@ -302,7 +484,7 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      {/* 6. EXECUTIVE FAQ */}
+      {/* 7. EXECUTIVE FAQ */}
       <section className="py-32 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -338,7 +520,7 @@ export default function ServicesHubPage() {
         </div>
       </section>
 
-      {/* 7. BOTTOM CTA */}
+      {/* 8. BOTTOM CTA */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 text-center">
         <div className="bg-slate-900 rounded-[3rem] p-12 md:p-24 relative overflow-hidden border border-slate-800 shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_center,_var(--tw-gradient-stops))] from-blue-600/30 via-slate-900 to-slate-900 z-0 pointer-events-none"></div>
